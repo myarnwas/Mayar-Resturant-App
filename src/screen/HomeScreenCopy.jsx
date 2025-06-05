@@ -112,14 +112,14 @@ const HomeScreen = () => {
       <View style={styles.header}>
         <View>
           <Text style={{ fontSize: 28 }}>Hello,</Text>
-          <Text style={{ fontSize: 28, fontWeight: 'bold', marginLeft: 10 }}>Mayar Waleed Nawas</Text>
+          <Text style={{ fontSize: 28, fontWeight: 'bold' }}>Mayar Waleed Nawas</Text>
           <Text style={{ marginTop: 5, fontSize: 22, color: '#FFA500' }}>
-            What do you want today
+            What do you want today ?
           </Text>
         </View>
         <Image
-          source={require('../assets/person.png')}
-          style={{ height: 50, width: 50, borderRadius: 25 }}
+          source={require('../assets/8071220.jpg')}
+          style={{ height: 65, width: 65, borderRadius: 70 }}
         />
       </View>
       <View style={{ marginTop: 40, flexDirection: 'row', paddingHorizontal: 20 }}>
