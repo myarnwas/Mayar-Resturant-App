@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   LoginButtonWrapper:{
-    backgroundColor:'#000000',
+    backgroundColor:'#F9813A',
     borderRadius:100,
     width:'100%',
     height:50,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   LoginText:{
     color:'#ffffff',
-    fontFamily:fonts.Bold,
+    fontWeight:'bold',
     fontSize:18,
     textAlign:'center',
     padding:10, 
