@@ -39,6 +39,8 @@ const HomeScreen = () => {
             onPress={() => setSelectedCategoryIndex(index)}>
             <View
               style={{
+                borderWidth:3,
+    borderRadius:100, borderColor:'#FFA500',
                 backgroundColor:
                   selectedCategoryIndex === index
                     ? '##FFA500'
@@ -242,6 +244,9 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     justifyContent: 'center',
     alignItems: 'center',
+    borderWidth:0.5,
+    borderRadius:100, 
+    borderColor:'#FFA500',
   },
   card: {
     height: 220,
