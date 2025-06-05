@@ -3,7 +3,7 @@ import React from 'react'
 import { colors } from '../utils/colors';
 import { fonts } from '../utils/fonts';
 import { useNavigation } from '@react-navigation/native';
-
+import { PrimaryButton, SecondaryButton } from '../views/components/Button';
 
 const styles = StyleSheet.create({
   container:{
@@ -18,41 +18,31 @@ const styles = StyleSheet.create({
   },
   bannerImage:{
       height:250,
-      width:231,
-      marginVertical: 20,
+      width:261,
+      marginVertical: 10,
   },
   title:{
       fontSize:36,
-      fontFamily:fonts.Bold,
-      paddingHorizontal: 20,
+      fontWeight: 'bold',
+      paddingHorizontal: 2,
       textAlign: 'center',
       color: colors.primary,
-      marginTop: 40,
+      marginTop: 5,
   },
   SubTitle:{
     fontSize: 18,
     fontFamily:fonts.Medium,
-    color:colors.secondary,
+    color:'#F9813A',
     paddingHorizontal: 20,
     marginVertical: 20,
     textAlign: 'center',
   },
-  buttonContainear:{
-    flexDirection: "row",
-    marginTop: 20,
-    borderWidth:1,
-    borderColor:colors.primary,
-    width: '80%',
-    height: 40,
-    borderRadius:100,
-    backgroundColor:'#000000',
-  },
+  
   LoginbuttonWrapper:{
     justifyContent: 'center',
     alignItems: 'center',
     width: '50%',
     borderRadius:98,
-    backgroundColor:'#ffffff',
   },
   LoginbuttonText:{
     color: '#ffffff',
@@ -62,6 +52,17 @@ const styles = StyleSheet.create({
   SignupbuttonText:{
     fontSize: 18,
     fontFamily:fonts.SemiBold,
+  },
+  button:{
+    width:'100%',
+    padding: 10,
+
+  },
+  button1:{
+    marginBottom:10,
+  },
+  button2:{
+    marginBottom:90,
   },
 });
 
@@ -77,19 +78,15 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <Image source={require("../assets/logo.png")} style={styles.logo}/>
       <Image source={require("../assets/man.png")} style={styles.bannerImage}/>
-      <Text style={styles.title}>Welcome mayar react App</Text>
-      <Text style={styles.SubTitle}>First Youtube Project</Text>
-    <View style={styles.buttonContainear}>
-      <TouchableOpacity style={[styles.LoginbuttonWrapper,
-        {backgroundColor: colors.primary},
-      ]}
-      onPress={handleLogin}
-      >
-        <Text style={styles.LoginbuttonText}>Login</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={[styles.LoginbuttonWrapper]} onPress={handleSignup}>
-        <Text style={styles.SignupbuttonText}>Sign-up</Text>
-      </TouchableOpacity>
+      <Text style={styles.title}>Welcome Resturant App</Text>
+      <Text style={styles.SubTitle}>First Mayar Waleed Nawas React Native Project</Text>
+    <View style={styles.button}>
+      <View style={styles.button1}>
+        <SecondaryButton title="Login"  onPress={handleLogin}></SecondaryButton>
+      </View>
+      <View  style={styles.button2}>
+        <PrimaryButton title="Sign-up"  onPress={handleSignup}></PrimaryButton>
+      </View>
     </View>
     </View>
     
