@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
   googleButtonContinue:{
     borderWidth:3,
     borderRadius:100,
+    borderColor:'#F9813A'
   },
   googleText:{
     fontSize:20,
