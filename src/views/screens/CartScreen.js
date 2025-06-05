@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {SafeAreaView, StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -9,8 +9,15 @@ import {PrimaryButton, SecondaryButton} from '../components/Button';
 
 
 const CartScreen = ({navigation, route }) => {
-   const { selectedItem } = route.params || {}; // استقبل العنصر الممرر
-  const cartItems = selectedItem ? [selectedItem] : []; 
+   const { selectedItem } = route.params || {}; 
+  const [cartItems, setCartItems] = useState([]);
+
+  React.useEffect(() => {
+    const { selectedItem } = route.params || {};
+    if (selectedItem) {
+      setCartItems((prevItems) => [...prevItems, selectedItem]);
+    }
+  }, [route.params]);
   
   const CartCard = ({item}) => {
     return (
