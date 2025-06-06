@@ -8,7 +8,7 @@ import { PrimaryButton, SecondaryButton } from '../views/components/Button';
 const styles = StyleSheet.create({
   container:{
       flex:1,
-      backgroundColor:colors.white,
+      backgroundColor:'#FFE5B4',
       alignItems:"center",
   },
   logo:{
